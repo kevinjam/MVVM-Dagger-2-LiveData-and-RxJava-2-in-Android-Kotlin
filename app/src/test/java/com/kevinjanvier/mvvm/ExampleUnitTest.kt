@@ -1,4 +1,4 @@
-package com.kevinjanvier.login
+package com.kevinjanvier.mvvm
 
 import org.junit.Test
 

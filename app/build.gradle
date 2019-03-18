@@ -4,6 +4,8 @@ apply plugin: 'kotlin-android'
 
 apply plugin: 'kotlin-android-extensions'
 
+apply plugin: 'kotlin-kapt'
+
 android {
     compileSdkVersion 28
     defaultConfig {
@@ -33,9 +35,13 @@ dependencies {
 
     /* dagger dependency for DI*/
     implementation "com.google.dagger:dagger:2.13"
-    annotationProcessor "com.google.dagger:dagger-compiler:2.13"
     compileOnly 'javax.annotation:jsr250-api:1.0'
+    implementation "com.google.dagger:dagger-android-support:2.13"
     implementation 'javax.inject:javax.inject:1'
+    compileOnly 'javax.annotation:jsr250-api:1.0'
+
+    kapt "com.google.dagger:dagger-android-processor:2.13"
+    kapt "com.google.dagger:dagger-compiler:2.13"
 
 
     /*Retrofit lib*/
@@ -52,5 +58,5 @@ dependencies {
     /* LiveData lib*/
     implementation "android.arch.lifecycle:extensions:1.1.1"
     implementation "android.arch.lifecycle:runtime:1.1.1"
-    annotationProcessor "android.arch.lifecycle:compiler:1.1.1"
+    kapt "android.arch.lifecycle:compiler:1.1.1"
 }

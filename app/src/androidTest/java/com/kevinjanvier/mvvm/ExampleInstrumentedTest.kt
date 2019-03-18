@@ -1,4 +1,4 @@
-package com.kevinjanvier.login
+package com.kevinjanvier.mvvm
 
 import android.support.test.InstrumentationRegistry
 import android.support.test.runner.AndroidJUnit4
